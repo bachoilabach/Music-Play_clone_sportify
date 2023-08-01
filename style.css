@@ -197,11 +197,12 @@ button {
 }
 
 .row-song {
-  grid-gap: 24px;
+  grid-gap: 25px;
   display: grid;
-  grid-template-columns: repeat(7, minmax(170px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  justify-content: space-around;
   min-width: 372px;
-  padding: 0 24px;
+  padding: 0 20px;
   position: relative;
 }
 
@@ -210,7 +211,7 @@ button {
   height: 243px;
   padding: 16px;
   background-color: var(--background-elevated-base);
-  flex-basis: calc(50% - 24px);
+  /* flex-basis: calc(50% - 24px); */
 }
 .song:hover {
   cursor: pointer;
@@ -395,6 +396,7 @@ button {
 
 .player-controls-right {
   display: flex;
+  margin-right: 10px;
 }
 
 .player-controls-right i {
@@ -460,82 +462,88 @@ button {
 }
 
 @media only screen and (max-width: 828px) {
-    h2{
-        margin-top: 10px;
-        font-size: 25px;
-    }
-    .header-main{
-        display: none;
-    }
-    aside {
-        display: none;
-    }
-    body {
-        display: block;
-    }
-    .row-song {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-        padding: 0;
-        gap: 8px;
-        align-items: center;
-        padding-bottom: 30px;
-    }
-    .song {
-        margin-left: 3px;
-        width: 94%;
-        height: 90px;
-        padding: 8px;
-    }
+  h2 {
+    margin-top: 10px;
+    font-size: 25px;
+  }
+  .header-main {
+    display: none;
+  }
+  aside {
+    display: none;
+  }
+  body {
+    display: block;
+  }
+  .row-song {
+    grid-template-columns: repeat(1, minmax(0, 1fr))!important;
+    padding: 0;
+    gap: 8px;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+  .song {
+    margin-left: 3px;
+    width: 94%;
+    height: 90px;
+    padding: 8px;
+  }
 
-    .song h3{
-        font-size: 22px;
-    }
-    .song-item {
-        width: 120px; /* Kích thước chiều rộng của bài hát */
-        height: 100px; /* Kích thước chiều cao của bài hát */
-    }
+  .song h3 {
+    font-size: 22px;
+  }
+  .song-item {
+    width: 120px; /* Kích thước chiều rộng của bài hát */
+    height: 100px; /* Kích thước chiều cao của bài hát */
+  }
 
-    .song-content{
-        display: flex;
-    }
+  .song-content {
+    display: flex;
+  }
 
-    .song-content img {
-        max-width: 90px; /* Kích thước tối đa của hình ảnh */
-        max-height: 90px; /* Kích thước tối đa của hình ảnh */
-        object-fit: cover; /* Đảm bảo hình ảnh không bị bóp méo */
-        margin-bottom: 0;
-    }
+  .song-content img {
+    max-width: 90px; /* Kích thước tối đa của hình ảnh */
+    max-height: 90px; /* Kích thước tối đa của hình ảnh */
+    object-fit: cover; /* Đảm bảo hình ảnh không bị bóp méo */
+    margin-bottom: 0;
+  }
 
-    .author {
-        font-size: 14px; /* Kích thước font chữ của tên ca sĩ */
-        font-weight: 500;
-    }
+  .author {
+    font-size: 14px; /* Kích thước font chữ của tên ca sĩ */
+    font-weight: 500;
+  }
 
-    .detail-song{
-        margin-left: 20px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
+  .detail-song {
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 
-    .media{
-        display: none;
-    }
+  .media {
+    display: none;
+  }
 
-    .player-controls-right{
-        display: none;
-    }
+  .player-controls-right {
+    display: none;
+  }
 
-    .time-duration{
-        width: 100%;
-    }
-    .icon-play{
-        bottom: 10px;
-        right: 10px;
-    }
+  .time-duration {
+    width: 100%;
+  }
+  .icon-play {
+    bottom: 10px;
+    right: 10px;
+  }
 
-    .time-of-song{
-        width: 95%;
-        margin-left: -15px;
-    }
+  .time-of-song {
+    width: 95%;
+    margin-left: -15px;
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 1600px) {
+  .row-song {
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  }
 }
