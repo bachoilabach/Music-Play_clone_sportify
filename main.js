@@ -181,6 +181,7 @@ let tempLastVolumnValue = lastVolumnValue;
             _this.nextSong();
         }
         audio.play();
+        _this.render();
         };
 
         // xử lý khi prev bài
@@ -191,6 +192,7 @@ let tempLastVolumnValue = lastVolumnValue;
             _this.prevSong();
         }
         audio.play();
+        _this.render();
         };
 
         // random bài
