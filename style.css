@@ -57,6 +57,10 @@ aside nav {
   background-color: var(--background-color);
 }
 
+.library{
+  max-height: 100%;
+}
+
 .your-library,
 .menu-active a {
   color: var(--white-color);
@@ -156,7 +160,7 @@ button {
 
 .main {
   max-width: 100%;
-  max-height: 835px;
+  min-height: 835px;
   background-color: var(--background-color);
   overflow-y: auto;
 }
@@ -247,7 +251,7 @@ button {
   bottom: 0;
   left: 0;
   max-width: 1900px;
-  width: 100%;
+  min-width: 100%;
   background-color: var(--black-color);
   color: #ffffff;
   padding: 8px;
@@ -384,19 +388,18 @@ button {
   background: #04aa6d;
   border-radius: 50%;
   cursor: pointer;
-  /* margin-top: -5px; */
 }
 
-/* .slider::-moz-range-thumb{
-        width: 10px;
-        height: 10px;
-        background: #04aa6d;
-        cursor: pointer;
-    } */
+.slider::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  background: #04aa6d;
+  cursor: pointer;
+}
 
 .player-controls-right {
   display: flex;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 .player-controls-right i {
@@ -476,11 +479,11 @@ button {
     display: block;
   }
   .row-song {
-    grid-template-columns: repeat(1, minmax(0, 1fr))!important;
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
     padding: 0;
     gap: 8px;
     align-items: center;
-    padding-bottom: 30px;
+    margin-bottom: 80px;
   }
   .song {
     margin-left: 3px;
@@ -542,8 +545,20 @@ button {
   }
 }
 
-@media screen and (min-width: 0) and (max-width: 1600px) {
+@media screen and (min-width: 929px) and (max-width: 2000px){
   .row-song {
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  }
+
+  body{
+    height: 1100px!important;
+  }
+  
+  .main{
+    height: 1010px!important;
+  }
+
+  .library{
+    height: 870px;
   }
 }
