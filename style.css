@@ -29,7 +29,8 @@ body {
 }
 
 aside {
-  width: 420px;
+  width: 400px;
+  max-width: 100%;
 }
 
 ul li {
@@ -196,14 +197,12 @@ button {
 }
 
 .row-song {
+  /* width: 95%; */
   grid-gap: 24px;
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-columns: repeat(7, minmax(170px, 1fr));
   min-width: 372px;
   padding: 0 24px;
-  /* display: flex;
-        flex-wrap: wrap; 
-        gap: 24px; */
   position: relative;
 }
 
