@@ -180,6 +180,7 @@ let tempLastVolumnValue = lastVolumnValue;
         } else {
             _this.nextSong();
         }
+        _this.loadCurrentSong();
         audio.play();
         _this.render();
         };
@@ -191,6 +192,7 @@ let tempLastVolumnValue = lastVolumnValue;
         } else {
             _this.prevSong();
         }
+        _this.loadCurrentSong();
         audio.play();
         _this.render();
         };
