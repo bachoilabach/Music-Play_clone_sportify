@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music</title>
+    <link
+      rel="shortcut icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/768px-Spotify_logo_without_text.svg.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <aside class="">
+      <nav>
+        <ul class="menu-active boder-radius">
+          <li>
+            <i
+              class="fa-solid fa-house"
+              style="color: #ffffff; font-size: 18px"
+            ></i>
+            <a id="home" href="">Home</a>
+          </li>
+          <li>
+            <i
+              class="fa-solid fa-magnifying-glass"
+              style="color: #ffffff; font-size: 18px"
+            ></i>
+            <a id="search" href="">Search</a>
+          </li>
+        </ul>
+        <ul class="library boder-radius">
+          <header class="header-library">
+            <button class="your-library">
+              <i
+                class="fa-regular fa-bookmark"
+                style="color: #ffffff; font-size: 18px"
+              ></i>
+              <span>Your Library</span>
+            </button>
+            <div>
+              <i
+                class="fa-solid fa-plus"
+                style="color: #ffffff; font-size: 18px"
+              ></i>
+              <i
+                class="fa-solid fa-arrow-right"
+                style="color: #ffffff; font-size: 18px"
+              ></i>
+            </div>
+          </header>
+          <div class="container-library">
+            <section class="create-playlist boder-radius">
+              <div class="text-of-playlist">
+                <p1>Create your fisrt play list</p1><br />
+                <p2>It's easy, we'll help you</p2><br />
+              </div>
+              <span><button id="create">Create playlist</button></span>
+            </section>
+            <section class="browse-podcasts boder-radius">
+              <div class="text-of-podcasts">
+                <p1>Create your fisrt play list</p1><br />
+                <p2>It's easy, we'll help you</p2><br />
+              </div>
+              <span><button id="podcasts">Create playlist</button></span>
+            </section>
+          </div>
+        </ul>
+      </nav>
+    </aside>
+    <div class="main boder-radius">
+      <header class="header-main">
+        <div class="forward">
+          <div class="circle">
+            <i class="fa-solid fa-chevron-left" style="color: #ffffff"></i>
+          </div>
+          <div class="circle">
+            <i class="fa-solid fa-chevron-right" style="color: #ffffff"></i>
+          </div>
+        </div>
+        <i class="fa-solid fa-user" style="color: #ffffff"></i>
+      </header>
+      <main id="home-page">
+        <div class="list-songs">
+          <section class="row">
+            <!-- song -->
+            <div class="header-row">
+              <h2>Your Playlist</h2>
+            </div>
+            <div class="row-song">
+              
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <div class="player-controls">
+      <div class="media">
+        <div class="media-left">
+          <img src="" alt="" class="thumb" />
+        </div>
+        <div class="media-content">
+          <p1 class="name_of_the_song">Thiếu niên</p1><br />
+          <p2 class="singer">少年</p2>
+        </div>
+        <div class="media-right">
+          <i class="fa-regular fa-heart" style="color: #ffffff"></i>
+          <i class="fa-regular fa-image" style="color: #ffffff"></i>
+        </div>
+      </div>
+      <div class="player-controls-player-bar">
+        <div class="player-controls-buttons">
+          <div class="btn-random">
+            <i class="fa-solid fa-shuffle" style="color: #ffffff"></i>
+          </div>
+          <div class="btn-prev">
+            <i class="fa-solid fa-backward-step" style="color: #ffffff"></i>
+          </div>
+          <div class="btn-play">
+            <i class="fa-solid fa-pause hide" style="color: #ffffff"></i>
+            <i class="fa-solid fa-play" style="color: #ffffff"></i>
+          </div>
+          <div class="btn-next">
+            <i class="fa-solid fa-forward-step" style="color: #ffffff"></i>
+          </div>
+          <div class="btn-repeat">
+            <i class="fa-solid fa-rotate-right" style="color: #ffffff"></i>
+          </div>
+        </div>
+        <div class="time-of-song">
+          <span class="time-left"></span>
+          <div class="time-duration">
+            <input
+              type="range"
+              class="slider"
+              id="progress"
+              value="0"
+              step="1"
+              min="0"
+              max="100"
+            />
+          </div>
+          <span class="time-right"></span>
+        </div>
+        <audio id="audio" src=""></audio>
+      </div>
+      <div class="player-controls-right">
+        <i class="fa-solid fa-list-ol" style="color: #ffffff"></i>
+        <i class="fa-solid fa-music" style="color: #ffffff"></i>
+        <div class="volumn">
+          <div class="volumn-click">
+            <i class="fa-solid fa-volume-xmark hide" style="color: #ffffff"></i>
+            <i class="fa-solid fa-volume-high" style="color: #ffffff"></i>
+          </div>
+
+          <div class="volumn-slide">
+            <input
+              type="range"
+              class="slider"
+              value="100"
+              step="1"
+              min="0"
+              max="100"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
